@@ -1,0 +1,113 @@
+# ─────────────────────────────────────────────
+# Secrets & environment  (NEVER commit these)
+# ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials.json
+service-account*.json
+
+# ─────────────────────────────────────────────
+# Node / Vite
+# ─────────────────────────────────────────────
+node_modules/
+jspm_packages/
+dist/
+dist-ssr/
+.vite/
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+.npm/
+.pnpm-store/
+.yarn/*
+!.yarn/releases
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─────────────────────────────────────────────
+# Python (data pipeline / ONNX export scripts)
+# ─────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+
+# ─────────────────────────────────────────────
+# ML / OCR model artifacts (large, regenerate with the export scripts)
+# ─────────────────────────────────────────────
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.pb
+*.tflite
+# Keep the placeholder docs inside the model / wasm folders
+public/models/trocr_onnx/*
+!public/models/trocr_onnx/MODELS_README.txt
+public/onnxruntime-web/*
+!public/onnxruntime-web/WASM_README.txt
+# Hugging Face / torch caches
+.huggingface/
+huggingface/
+.torch/
+
+# ─────────────────────────────────────────────
+# Logs, runtime data, coverage
+# ─────────────────────────────────────────────
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+coverage/
+.nyc_output/
+
+# ─────────────────────────────────────────────
+# Editors / IDEs
+# ─────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─────────────────────────────────────────────
+# OS junk
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─────────────────────────────────────────────
+# Misc
+# ─────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tmp
+*.bak
